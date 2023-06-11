@@ -9,7 +9,7 @@ const sendEmail = async(req,res)=>{
         port: 587,
         auth: {
             user: 'freeman.cormier@ethereal.email',
-            pass: 'uXuhPZk4wZXK36uZQS'
+            pass: process.env.NMPass,
         }
     });
     let info = await transporter.sendMail({
